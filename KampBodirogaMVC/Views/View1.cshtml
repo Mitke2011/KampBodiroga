@@ -1,0 +1,187 @@
+﻿@{
+    ViewBag.Title = "View1";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<body>
+
+    <div>
+        <!-- Start Content Box -->
+
+        <div class="content-box-header">
+
+            <h3 style="cursor: s-resize;">Administracija </h3>
+
+            <ul class="content-box-tabs">
+                @*<li><a class="default-tab current" onclick="Ajax(1, 'p.datum DESC')" href="#tab1">Učesnisi</a></li>
+                <li><a title="Odredi cjene učešća učesnicima" onclick="PodesiUplatu(1)" href="#tab2">Cjena učešća</a></li>
+                <li><a onclick="GenerisiTextBox()" href="#tab3">Pretraga</a></li>*@
+                <li><a class="default-tab current" onclick="" href="#tab1">Učesnisi</a></li>
+                <li><a title="Odredi cjene učešća učesnicima" onclick="" href="#tab2">Cjena učešća</a></li>
+                <li><a onclick="" href="#tab3">Pretraga</a></li>
+            </ul>
+
+            <div class="clear"></div>
+
+        </div>
+        <!-- End .content-box-header -->
+
+        <div class="content-box-content">
+
+            <div id="notify"></div>
+
+            <div class="tab-content default-tab" id="tab1" style="display: block;">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="4%"></th>
+                            <th width="29%">
+                                <a onclick="Ajax(1, 'u.ime_prezime DESC')" href="#">
+                                    <img src="../Content/images/admin/up.png">
+                                </a>
+                                Ime i prezime
+               
+                                <a onclick="Ajax(1, 'u.ime_prezime ASC')" href="#">
+                                    <img src="../Content/images/admin/down.png">
+                                </a>
+                            </th>
+                            <th width="20%">
+                                <a onclick="Ajax(1, 'u.datum_rodjenja DESC')" href="#">
+                                    <img src="../Content/images/admin/up.png">
+                                </a>
+                                Datum rođenja
+               
+                                <a onclick="Ajax(1, 'u.datum_rodjenja ASC')" href="#">
+                                    <img src="../Content/images/admin/down.png">
+                                </a>
+                            </th>
+                            <th width="22%">Grad</th>
+                            <th width="10%">Uplata</th>
+                            <th width="15%">Opcije</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <div class="bulk-actions align-left">
+                                    <a class="button" href="#">Obriši obilježene</a>
+                                </div>
+
+                                <div class="pagination">« Prethodna<a title="1" class="number current" id="1" onclick="Ajax(this.id,'datum DESC')" href="#">1</a>Sledeca » </div>
+                                <div class="clear"></div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox"></td>
+                            <td>yyyyyyy</td>
+                            <td>07.07.1994</td>
+                            <td>haaa</td>
+                            <td>36 €</td>
+                            <td><a title="Izmjeni" onclick="EditUcesnik(14)" href="#">
+                                <img alt="Edit" src="../Content/images/admin/pencil.png"></a> &nbsp;<a title="Obriši" onclick="Delete('14', '1', 'datum DESC')" href="#"><img alt="Delete" src="../Content/images/admin/cross.png"></a> &nbsp;<a title="Nova uplata" onclick="DodajNovuUplatu(14)" href="#"><img alt="Uplate" src="../Content/images/admin/hammer_screwdriver.png"></a>&nbsp;<a title="Pošalji mail" onclick="PosaljiMail(14)" href="#"><img alt="Mail" src="../Content/images/admin/e-mail.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox"></td>
+                            <td>fsdaf</td>
+                            <td>30.06.1994</td>
+                            <td>Neki drugi</td>
+                            <td>127 €</td>
+                            <td><a title="Izmjeni" onclick="EditUcesnik(13)" href="#">
+                                <img alt="Edit" src="../Content/images/admin/pencil.png"></a> &nbsp;<a title="Obriši" onclick="Delete('13', '1', 'datum DESC')" href="#"><img alt="Delete" src="../Content/images/admin/cross.png"></a> &nbsp;<a title="Nova uplata" onclick="DodajNovuUplatu(13)" href="#"><img alt="Uplate" src="../Content/images/admin/hammer_screwdriver.png"></a>&nbsp;<a title="Pošalji mail" onclick="PosaljiMail(13)" href="#"><img alt="Mail" src="../Content/images/admin/e-mail.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox"></td>
+                            <td>yxyxcvcyxvcyxv</td>
+                            <td>07.10.2000</td>
+                            <td>Grad</td>
+                            <td>200 €</td>
+                            <td><a title="Izmjeni" onclick="EditUcesnik(16)" href="#">
+                                <img alt="Edit" src="../Content/images/admin/pencil.png"></a> &nbsp;<a title="Obriši" onclick="Delete('16', '1', 'datum DESC')" href="#"><img alt="Delete" src="../Content/images/admin/cross.png"></a> &nbsp;<a title="Nova uplata" onclick="DodajNovuUplatu(16)" href="#"><img alt="Uplate" src="../Content/images/admin/hammer_screwdriver.png"></a>&nbsp;<a title="Pošalji mail" onclick="PosaljiMail(16)" href="#"><img alt="Mail" src="../Content/images/admin/e-mail.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox"></td>
+                            <td>Marko Markovic</td>
+                            <td>23.04.1998</td>
+                            <td>Beograd</td>
+                            <td>0 €</td>
+                            <td><a title="Izmjeni" onclick="EditUcesnik(12)" href="#">
+                                <img alt="Edit" src="../Content/images/admin/pencil.png"></a> &nbsp;<a title="Obriši" onclick="Delete('12', '1', 'datum DESC')" href="#"><img alt="Delete" src="../Content/images/admin/cross.png"></a> &nbsp;<a title="Nova uplata" onclick="DodajNovuUplatu(12)" href="#"><img alt="Uplate" src="../Content/images/admin/hammer_screwdriver.png"></a>&nbsp;<a title="Pošalji mail" onclick="PosaljiMail(12)" href="#"><img alt="Mail" src="../Content/images/admin/e-mail.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="tab-content" id="tab2" style="display: none;">
+            </div>
+            <!-- End #tab2 -->
+
+            <!-- Start #tab4 -->
+
+            <div class="tab-content" id="tab3" style="display: none;">
+
+                <form action="" method="post">
+
+                    <table width="100%">
+                        <tbody>
+                            <tr class="alt-row">
+                                <td width="20%">
+                                    <label for="tab3_pretraga">Pretraga po: </label>
+                                </td>
+                                <td width="20%" align="left">
+                                    <select name="tab3_pretraga" id="tab3_pretraga">
+                                        <option id="ime_prezime" onclick="GenerisiTextBox()" value="ime_prezime">Ime i prezime </option>
+                                        <option id="datum_rodjenja" onclick="GenerisiRodjendan()" value="datum_rodjenja">Datum rođenja </option>
+                                        <option id="broj_pasosa" onclick="GenerisiTextBox()" value="broj_pasosa">Broj pasoša </option>
+                                        <option id="jmbg" onclick="GenerisiTextBox()" value="jmbg">JMBG </option>
+                                        <option id="drzava" onclick="GenerisiTextBox()" value="drzava">Država </option>
+                                        <option id="grad" onclick="GenerisiTextBox()" value="grad">Grad </option>
+                                        <option id="adresa" onclick="GenerisiTextBox()" value="adresa">Adresa </option>
+                                        <option id="klub" onclick="GenerisiTextBox()" value="klub">Klub </option>
+                                        <option id="visina" onclick="GenerisiTextBox()" value="visina">Visina </option>
+                                        <option id="tezina" onclick="GenerisiTextBox()" value="tezina">Težina </option>
+                                        <option id="pozicija" onclick="GenerisiPoziciju()" value="pozicija">Pozicija </option>
+                                        <option id="prevoz" onclick="GenerisiPrevoz()" value="prevoz">Prevoz </option>
+                                        <option id="oprema" onclick="GenerisiOpremu()" value="oprema">Oprema </option>
+                                        <option id="smjena" onclick="GenerisiSmjene()" value="smjena">Smjena </option>
+                                    </select>
+                                </td>
+                                <td align="left">
+                                    <div id="tab3_upit_div">
+                                    </div>
+                                </td>
+                                <td align="right">
+                                    <input id="dugme" style="height: 28px; color: red;" onclick="Trazi()" type="button" value="Traži">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <div class="clear"></div>
+                    <!-- End .clear -->
+
+                </form>
+
+                <div id="rezultati_pretrage">
+                    <!-- Rezultati pretrage -->
+                </div>
+
+            </div>
+            <!-- End #tab4 -->
+
+        </div>
+        <!-- End .content-box-content -->
+
+    </div>
+
+</body>

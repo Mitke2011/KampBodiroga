@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dejan Bodiroga camp - Administracija</title>
+    <!--                       CSS                       -->
+
+    <!-- Reset Stylesheet -->
+    <link rel="stylesheet" href="../Content/css/reset.css" type="text/css"/>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../Content/css/style.css" type="text/css" />
+
+    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+    @*<link rel="stylesheet" href="../Content/css/invalid.css" type="text/css" />*@
+
+    <!-- Internet Explorer Fixes Stylesheet -->
+
+    <!--[if lte IE 7]>
+			<link rel="stylesheet" href="../Content/css/ie.css" type="text/css" media="screen" />
+		<![endif]-->
+
+    <!--                       Javascripts                       -->
+
+    <script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../Content/scripts/simpla.jquery.configuration.js"></script>
+    <!-- jQuery Configuration -->
+    <script type="text/javascript" src="../Content/scripts/facebox.js"></script>
+    <!-- Facebox jQuery Plugin -->
+    <script type="text/javascript" src="../Content/scripts/jquery.wysiwyg.js"></script>
+    <!-- jQuery WYSIWYG Plugin -->
+
+    <!-- jQuery Datepicker Plugin -->
+    <script type="text/javascript" src="../Content/scripts/jquery.datePicker.js"></script>
+    <script type="text/javascript" src="../Content/scripts/jquery.date.js"></script>
+    <script type="text/javascript" src="js/skripte.js"></script>
+
+    <!--[if IE]><script type="text/javascript" src="../Content/scripts/jquery.bgiframe.js"></script><![endif]-->
+
+    <!-- Internet Explorer .png-fix -->
+
+    <!--[if IE 6]>
+			<script type="text/javascript" src="../Content/scripts/DD_belatedPNG_0.0.7a.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix('.png_bg, img, li');
+			</script>
+		<![endif]-->
+
+    <!--script src="js/jquery.lint.js" type="text/javascript" charset="utf-8"></script-->
+
+    @*<link rel="stylesheet" href="../Content/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <script src="../scripts/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>*@
+
+    <style type="text/css">
+        .prikazi table {
+            background: #e5e5e5;
+            margin-top: 1px;
+            height: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="body-wrapper">
+        <!-- Wrapper for the radial gradient background -->
+
+        <div id="sidebar">
+            <div id="sidebar-wrapper">
+                <!-- Sidebar with logo and menu -->
+
+                <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+
+                <!-- Logo (221px wide) -->
+                <a href="#">
+                    <img src="../Content/images/logo.png" alt="Simpla Admin logo" width="122" height="146" id="logo" /></a><!-- Sidebar Profile links -->
+                <div id="profile-links">
+                    Pozdrav, <a href="#" title="Edit your profile">Admine</a><br />
+                    <br />
+                    <a href="#" title="View the Site">Vidi sajt</a> | <a href="#" title="Sign Out">Izloguj se</a>
+                </div>
+                <ul class="gallery clearfix" style="display: none;"></ul>
+                <!-- Pretty photo ENABLE  -->
+
+
+                <ul id="main-nav">
+
+                    <li>
+                        <a href="http://dejanbodirogacamp.com" class="nav-top-item no-submenu">Početna sajta
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-top-item current" style="padding-right: 15px;">Učesnik
+                        </a>
+                        <ul>
+                            <li><a href="dodaj_ucesnika.php?iframe=true&width=450&height=500" rel="prettyPhoto[dodaj_ucesnika]">Dodaj</a></li>
+                            <li><a href="izvrsi_uplatu.php?iframe=true&width=480&height=400" rel="prettyPhoto[izvrsi_uplatu]">Izvrsi uplatu</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-top-item">Prijave
+                        </a>
+                        <ul style="display:none;">
+                            <li><a href="index.php">Potvrdjene</a></li>
+                            <li><a href="#" onclick="Nepotvrdjene(1, 'datum DESC')">Ne potvrdjene</a></li>
+                            <li><a href="cjene.php?iframe=true&width=400&height=280" rel="prettyPhoto[cjena]">Cjena</a></li>
+                            <li><a href="smjene.php">Smjene</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-top-item">Export podataka
+                        </a>
+                        <ul style="display:none;">
+                            <li><a href="test.php">Export...</a></li>
+                            <li><a href="export.php">Kompletan spisak</a></li>
+                            <li><a href="export_uplate.php">Spisak uplata</a></li>
+                            <li><a href="export_smjena.php?smjena=prva">Prva smjena</a></li>
+                            <li><a href="export_smjena.php?smjena=druga">Druga smjena</a></li>
+                            <li><a href="export_smjena.php?smjena=treca">Treca smjena</a></li>
+                            <li><a href="export_smjena_bus.php?smjena=prva">Prva bus</a></li>
+                            <li><a href="export_smjena_bus.php?smjena=druga">Druga bus</a></li>
+                            <li><a href="export_smjena_bus.php?smjena=treca">Treca bus</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-top-item">Podsjetnik
+                        </a>
+                        <ul style="display:none;">
+                            <li><a href="#" onclick="Podsjetnik(1)">Obaveze</a></li>
+                            <li><a href="#" onclick="Prijatelji(1)">Prijatelji</a></li>
+                            <li><a href="#" onclick="Rodjendan(1)">VIP Rođendani</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-top-item">Mass mail
+                        </a>
+                        <ul style="display:none;">
+                            <li><a href="dodaj_mail.php?iframe=true&width=400&height=280" rel="prettyPhoto[m_kat]">Dodaj mail</a></li>
+                            <li><a href="mail_text.php?iframe=true&width=400&height=430" rel="prettyPhoto[mail_text]">Upis teksta za mail</a></li>
+                            <li><a href="salji_mail.php?iframe=true&width=750&height=450" rel="prettyPhoto[send_mail]">Slanje maila</a></li>
+                            <li><a href="#">Izlistaj mailove</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+        <!-- End #sidebar -->
+
+        <div id="main-content">
+            <!-- Main Content Section with everything -->
+
+            <noscript>
+                <!-- Show a notification if the user has disabled javascript -->
+                <div class="notification error png_bg">
+                    <div>
+                        Javascript is disabled or is not supported by your browser. Please <a href="../../../browsehappy.com/index.htm" title="Upgrade to a better browser">upgrade</a> your browser or <a href="../../../www.google.com/support/bin/answer_2EEFB1D5.py" title="Enable Javascript in your browser">enable</a> Javascript to navigate the interface properly.
+                    </div>
+                </div>
+            </noscript>
+
+            <ul class="shortcut-buttons-set gallery clearfix">
+
+                <li>
+                    <a href="dodaj_ucesnika.php?iframe=true&width=450&height=500" class="shortcut-button" rel="prettyPhoto[iframe]">
+                        <span>
+                            <img src="../Content/images/icons/pencil_48.png" alt="icon" /><br />
+                            Upiši učesnika</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="shortcut-button" href="#" onclick="Svi(1, 'datum DESC')">
+                        <span>
+                            <img src="../Content/images/icons/svi.png" alt="icon" /><br />
+                            Svi učesnici</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="shortcut-button" href="#" onclick="Racuni(1)">
+                        <span>
+                            <img src="../Content/images/icons/money.png" alt="icon" /><br />
+                            Sitni računi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="shortcut-button" href="#" onclick="Podsjetnik(1)">
+                        <span>
+                            <img src="../Content/images/icons/clock_48.png" alt="icon" /><br />
+                            Obaveze</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="shortcut-button">
+                        <span>
+                            <img src="../Content/images/icons/euro.png" alt="icon" /><br />
+                            Uplate</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="shortcut-button" onclick="Rodjendani(1)">
+                        <span>
+                            <img src="../Content/images/icons/rodjendan.png" alt="icon" /><br />
+                            Rođendani</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="shortcut-button" onclick="Autobus(1)">
+                        <span>
+                            <img src="../Content/images/icons/bus.png" alt="icon" /><br />
+                            Autobus</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            @*@section Scripts{
+                <script type="text/javascript" charset="utf-8">
+                    $(document).ready(function () {
+                        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({ animationSpeed: 'slow', theme: 'light_square', slideshow: 2000, autoplay_slideshow: false });
+                        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({ animationSpeed: 'fast', slideshow: 10000 });
+
+                        $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+                            custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+                            changepicturecallback: function () { initialize(); }
+                        });
+
+                        $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+                            custom_markup: '<div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+                            changepicturecallback: function () { _bsap.exec(); }
+                        });
+                    });
+                </script>}*@
+
+
+            <div class="clear"></div>
+            <!-- End .clear -->
+            <div id="notify_all"></div>
+            <div id="prikaz" class="prikazi"></div>
+            <div class="content-box" id="glavni">
+                <!-- Start Content Box -->
+                @RenderBody()
+                
+            </div>
+            <!-- End .content-box -->
+            <!-- End .content-box -->
+            <!-- End .content-box -->
+            <div class="clear"></div>
+
+
+            <!-- Start Notifications -->
+
+
+            <!-- End Notifications -->
+
+            <div id="footer">
+                <small>
+                    <!-- Remove this notice or replace it with whatever you want -->
+                    &#169; Copyright 2011 Dejan Bodiroga camp| Powered by <a href="#">Mladen Rakic</a> | <a href="#">Top</a>
+                </small>
+            </div>
+            <!-- End #footer -->
+
+        </div>
+        <!-- End #main-content -->
+
+    </div>
+</body>
+
+</html>

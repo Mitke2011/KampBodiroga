@@ -1,0 +1,174 @@
+﻿@model KampBodirogaMVC.Models.Ucesnici
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ucesnici</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ImePrezime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ImePrezime)
+            @Html.ValidationMessageFor(model => model.ImePrezime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Datum_Rodjenja)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Datum_Rodjenja)
+            @Html.ValidationMessageFor(model => model.Datum_Rodjenja)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Broj_Pasosa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Broj_Pasosa)
+            @Html.ValidationMessageFor(model => model.Broj_Pasosa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Jmbg)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Jmbg)
+            @Html.ValidationMessageFor(model => model.Jmbg)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Drzava)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Drzava)
+            @Html.ValidationMessageFor(model => model.Drzava)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Grad)
+            @Html.ValidationMessageFor(model => model.Grad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Adresa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Adresa)
+            @Html.ValidationMessageFor(model => model.Adresa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefon)
+            @Html.ValidationMessageFor(model => model.Telefon)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Klub)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Klub)
+            @Html.ValidationMessageFor(model => model.Klub)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Visina)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Visina)
+            @Html.ValidationMessageFor(model => model.Visina)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tezina)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tezina)
+            @Html.ValidationMessageFor(model => model.Tezina)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pozicija)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pozicija)
+            @Html.ValidationMessageFor(model => model.Pozicija)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Oprema)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Oprema)
+            @Html.ValidationMessageFor(model => model.Oprema)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Prevoz)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Prevoz)
+            @Html.ValidationMessageFor(model => model.Prevoz)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Smjena)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Smjena)
+            @Html.ValidationMessageFor(model => model.Smjena)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Napomena)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Napomena)
+            @Html.ValidationMessageFor(model => model.Napomena)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Datum_Unosa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Datum_Unosa)
+            @Html.ValidationMessageFor(model => model.Datum_Unosa)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

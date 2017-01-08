@@ -1,0 +1,141 @@
+﻿@model KampBodirogaMVC.Models.Ucesnici
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Ucesnici</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImePrezime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ImePrezime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Datum_Rodjenja)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Datum_Rodjenja)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Broj_Pasosa)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Broj_Pasosa)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Jmbg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Jmbg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Drzava)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Drzava)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Grad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grad)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Adresa)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adresa)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefon)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Klub)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Klub)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Visina)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Visina)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tezina)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tezina)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pozicija)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pozicija)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Oprema)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Oprema)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Prevoz)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Prevoz)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Smjena)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Smjena)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Napomena)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Napomena)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Datum_Unosa)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Datum_Unosa)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
